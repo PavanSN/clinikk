@@ -106,7 +106,11 @@ class NavBar extends StatelessWidget {
                     color: ThemeHandler().themeData.iconColor,
                   ),
                   onPressed: () {
-                    EditDeleteBottomsheet.showEditSheet(Post(), context);
+                    EditDeleteBottomsheet.showEditSheet(
+                      Post(),
+                      context,
+                      false,
+                    );
                   },
                 ),
               ),

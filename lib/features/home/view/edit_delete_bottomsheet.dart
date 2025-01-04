@@ -65,6 +65,7 @@ class EditDeleteBottomsheet {
   static Future<void> showEditSheet(
     Post currPost,
     BuildContext context,
+    bool isEdit,
   ) async {
     final theme = ThemeHandler().themeData;
 
@@ -127,7 +128,11 @@ class EditDeleteBottomsheet {
                 onPressed: () {
                   final title = titleController.text.trim();
                   final subtitle = subtitleController.text.trim();
-                  PostRepos.editPost(currPost.id, title, subtitle);
+                  if (isEdit) {
+                    PostRepos.editPost(currPost.id, title, subtitle);
+                  } else {
+                    PostRepos.addPost(title, subtitle);
+                  }
                   GetCubit.find<PostCubit>().getPost();
                   Navigator.pop(context);
                 },

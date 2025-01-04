@@ -93,7 +93,7 @@ class PostTile extends StatelessWidget {
             EditDeleteBottomsheet.showDeleteWarning(currPost, context);
           },
           onEdit: () async{
-            await EditDeleteBottomsheet.showEditSheet(currPost, context);
+            await EditDeleteBottomsheet.showEditSheet(currPost, context,true,);
 
             Navigator.pop(context);
           },
