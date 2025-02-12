@@ -13,7 +13,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
-  fluttertoast: ^8.2.10
+  fluttertoast: ^8.2.12
   get_cubit: ^1.1.0
   http: ^1.2.2
   http_requester: ^0.0.4
